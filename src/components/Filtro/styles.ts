@@ -10,6 +10,7 @@ export const Card = styled.div<PropsSemTipo>`
   background-color: ${(props) => (props.ativo ? '#1e90ff' : '#fff')};
   color: ${(props) => (props.ativo ? '#fff' : '#000')};
   border-radius: 8px;
+  cursor: pointer;
 `
 
 export const Label = styled.span`
