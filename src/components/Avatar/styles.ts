@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const AvatarContainer = styled.div`
   width: 50px;
   height: 50px;
-  background-color: #007bff;
+  background-color: #000;
   color: #fff;
   display: flex;
   align-items: center;

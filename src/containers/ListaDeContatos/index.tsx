@@ -3,14 +3,22 @@ import Contato from '../../components/Contato'
 import { RootReducer } from '../../store'
 
 const ListaDeContatos = () => {
-  const { contatos } = useSelector((state: RootReducer) => state)
+  const { itens } = useSelector((state: RootReducer) => state.contatos)
+  const { termo } = useSelector((state: RootReducer) => state.filtro)
+
+  const filtraContatos = () => {
+    return itens.filter(
+      (item) => item.nome.toLowerCase().search(termo.toLowerCase()) >= 0
+    )
+  }
 
   return (
     <main>
       <ul>
-        {contatos.map((c) => (
-          <li key={c.nome}>
+        {filtraContatos().map((c) => (
+          <li key={c.id}>
             <Contato
+              id={c.id}
               nome={c.nome}
               numero={c.numero}
               email={c.email}

@@ -2,14 +2,16 @@ import styled from 'styled-components'
 
 export const Card = styled.div`
   display: block;
+  padding: 10px;
   align-items: center;
   margin: 16px 0;
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
 `
 
 export const Info = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
   cursor: pointer;
 `
 
@@ -28,22 +30,51 @@ export const Nome = styled.h3`
 
 export const Dados = styled.div`
   display: grid;
+  padding: 0 70px 10px;
 `
 
-export const Campos = styled.textarea`
-  color: #8b8b8b;
+export const Dado = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const Label = styled.label`
+  display: flex;
+  align-items: center;
   font-size: 14px;
-  resize: none;
+  height: 20px;
+  width: 70px;
+  margin: 5px 0;
+`
+
+export const Campos = styled.input`
+  color: #8b8b8b;
+  margin: 5px;
+  width: 300px;
+  height: 20px;
+  font-size: 14px;
   border: none;
-  height: 30px;
-  padding: 0 70px;
   background-color: transparent;
 `
 
+export const BotaoContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+
 export const Botao = styled.button`
-  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: none;
+  margin-left: 5px;
   cursor: pointer;
-  background-color: #2f3640;
+  background-color: #000;
   color: #fff;
-  border-radius: 50px;
+  font-weight: bold;
+  border-radius: 8px;
+`
+
+export const Editando = styled.em`
+  color: #8b8b8b;
 `
