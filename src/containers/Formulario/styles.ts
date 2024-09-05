@@ -1,16 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 20px;
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 `
 
 export const Formulario = styled.form`
   display: grid;
-  text-align: center;
-  gap: 10px;
-  width: 100%;
+  height: 600px;
+  width: 400px;
 
   div {
     display: flex;
@@ -20,7 +18,6 @@ export const Formulario = styled.form`
 `
 
 export const Campos = styled.input`
-  margin: 5px;
   height: 30px;
   font-size: 14px;
   border: none;
@@ -28,15 +25,18 @@ export const Campos = styled.input`
 `
 
 export const BotaoCadastrar = styled.button`
-  padding: 5px;
   font-size: 16px;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #44bd32;
   color: #fff;
-  margin-top: 20px;
   cursor: pointer;
+  height: 70px;
+
+  &:hover {
+    background-color: #5ad945;
+  }
 `
 
 export const BotaoVoltar = styled.button`

@@ -14,4 +14,8 @@ export const Circulo = styled(Link)`
   justify-content: center;
   align-items: center;
   font-size: 40px;
+
+  &:hover {
+    background-color: #5ad945;
+  }
 `

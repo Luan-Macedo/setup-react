@@ -24,13 +24,14 @@ export const Avatar = styled.img`
 `
 
 export const Nome = styled.h3`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 `
 
 export const Dados = styled.div`
   display: grid;
   padding: 0 70px 10px;
+  transition: 0.4s ease;
 `
 
 export const Dado = styled.div`
@@ -41,7 +42,7 @@ export const Dado = styled.div`
 export const Label = styled.label`
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   height: 20px;
   width: 70px;
   margin: 5px 0;
@@ -52,7 +53,7 @@ export const Campos = styled.input`
   margin: 5px;
   width: 300px;
   height: 20px;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   background-color: transparent;
 `
@@ -77,4 +78,5 @@ export const Botao = styled.button`
 
 export const Editando = styled.em`
   color: #8b8b8b;
+  margin-right: 5px;
 `
