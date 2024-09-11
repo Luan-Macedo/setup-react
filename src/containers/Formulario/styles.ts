@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const Formulario = styled.form`
   display: grid;
-  height: 600px;
+  height: 500px;
   width: 400px;
 
   div {

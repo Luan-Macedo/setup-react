@@ -5,8 +5,10 @@ export const Card = styled.div`
   padding: 10px;
   align-items: center;
   margin: 16px 0;
-  border: 1px solid #c0c0c0;
+  border: 1px solid #84817a;
   border-radius: 8px;
+  background-color: #fff;
+  color: #000;
 `
 
 export const Info = styled.div`
@@ -19,7 +21,6 @@ export const Avatar = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #000;
   margin-right: 20px;
 `
 
@@ -31,7 +32,6 @@ export const Nome = styled.h3`
 export const Dados = styled.div`
   display: grid;
   padding: 0 70px 10px;
-  transition: 0.4s ease;
 `
 
 export const Dado = styled.div`
@@ -40,6 +40,7 @@ export const Dado = styled.div`
 `
 
 export const Label = styled.label`
+  color: #84817a;
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -49,7 +50,7 @@ export const Label = styled.label`
 `
 
 export const Campos = styled.input`
-  color: #8b8b8b;
+  color: #000;
   margin: 5px;
   width: 300px;
   height: 20px;
@@ -77,6 +78,6 @@ export const Botao = styled.button`
 `
 
 export const Editando = styled.em`
-  color: #8b8b8b;
+  color: #84817a;
   margin-right: 5px;
 `

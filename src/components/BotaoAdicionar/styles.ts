@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Circulo = styled(Link)`
   height: 64px;
   width: 64px;
-  background-color: #44bd32;
+  background-color: #000;
   color: #fff;
   position: fixed;
   bottom: 40px;
@@ -14,8 +14,4 @@ export const Circulo = styled(Link)`
   justify-content: center;
   align-items: center;
   font-size: 40px;
-
-  &:hover {
-    background-color: #5ad945;
-  }
 `
