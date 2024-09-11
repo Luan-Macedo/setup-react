@@ -13,10 +13,14 @@ const ListaDeContatos = () => {
     )
   }
 
+  const contatosOrdenadosEFiltrados = filtraContatos().sort((a, b) => {
+    return a.nome.localeCompare(b.nome)
+  })
+
   return (
     <Container>
       <ul>
-        {filtraContatos().map((c) => (
+        {contatosOrdenadosEFiltrados.map((c) => (
           <li key={c.id}>
             <Contato
               id={c.id}
