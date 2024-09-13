@@ -3,7 +3,11 @@ import Contato from '../../components/Contato'
 import { RootReducer } from '../../store'
 import { Container } from './styles'
 
-const ListaDeContatos = () => {
+export type Props = {
+  contador: number
+}
+
+const ListaDeContatos = (props: Props) => {
   const { itens } = useSelector((state: RootReducer) => state.contatos)
   const { termo } = useSelector((state: RootReducer) => state.filtro)
 
@@ -20,6 +24,8 @@ const ListaDeContatos = () => {
   return (
     <Container>
       <ul>
+        <span>{props.contador}</span>
+        <h2>Contatos</h2>
         {contatosOrdenadosEFiltrados.map((c) => (
           <li key={c.id}>
             <Contato
