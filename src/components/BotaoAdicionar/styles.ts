@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const Circulo = styled(Link)`
+export const BotaoPadrao = styled(Link)`
   height: 40px;
   width: 100%;
   background-color: #424242;

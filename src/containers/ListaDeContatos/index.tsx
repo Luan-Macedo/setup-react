@@ -52,7 +52,6 @@ const ListaDeContatos = () => {
               nome={c.nome}
               numero={c.numero}
               email={c.email}
-              empresa={c.empresa}
               tag={c.tag}
               endereco={c.endereco}
               aniversario={c.aniversario}

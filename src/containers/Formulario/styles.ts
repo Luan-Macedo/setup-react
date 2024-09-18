@@ -1,39 +1,40 @@
 import styled from 'styled-components'
 
 export const DivForm = styled.div`
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  padding: 0 40px;
 `
 
 export const Formulario = styled.form`
-  display: grid;
-  height: 500px;
-  width: 400px;
+  max-width: 547px;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+`
 
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+export const Inputs = styled.div`
+  display: grid;
+  margin: 16px 0;
 `
 
 export const Campos = styled.input`
   height: 30px;
-  font-size: 14px;
+  color: #fff;
   border: none;
-  background-color: transparent;
+  border-radius: 8px;
+  background-color: #424242;
+  margin-bottom: 4px;
 `
 
 export const BotaoCadastrar = styled.button`
-  font-size: 16px;
+  padding: 8px;
+  font-size: 14px;
   font-weight: bold;
   border: none;
   border-radius: 8px;
   background-color: #44bd32;
   color: #fff;
   cursor: pointer;
-  height: 70px;
 
   &:hover {
     background-color: #5ad945;
@@ -53,6 +54,23 @@ export const BotaoVoltar = styled.button`
   }
 `
 
-export const Titulo = styled.h2`
-  padding: 40px 20px;
+export const Titulo = styled.p`
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+`
+
+export const Opcoes = styled.div`
+  margin-bottom: 16px;
+
+  p {
+    margin-bottom: 6px;
+  }
+
+  label {
+    margin-right: 6px;
+  }
 `

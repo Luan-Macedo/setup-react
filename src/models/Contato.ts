@@ -5,7 +5,6 @@ class Contato {
   nome: string
   numero: string
   email: string
-  empresa: string
   tag: Tag
   endereco: string
   aniversario: string
@@ -15,7 +14,6 @@ class Contato {
     nome: string,
     numero: string,
     email: string,
-    empresa: string,
     tag: Tag,
     endereco: string,
     aniversario: string
@@ -24,7 +22,6 @@ class Contato {
     this.nome = nome
     this.numero = numero
     this.email = email
-    this.empresa = empresa
     this.tag = tag
     this.endereco = endereco
     this.aniversario = aniversario

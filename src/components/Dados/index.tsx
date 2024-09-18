@@ -55,40 +55,42 @@ const Dados = () => {
   return (
     <S.Container>
       <S.DivDados>
-        <S.Icone src={IconeNumero} />
-        <S.InputDados
-          type="text"
-          value={contatoSelecionado?.numero || ''}
-          disabled={!editavel}
-          onChange={(evento) => setNumero(evento.target.value)}
-        />
-      </S.DivDados>
-      <S.DivDados>
-        <S.Icone src={IconeEmail} />
-        <S.InputDados
-          type="text"
-          value={contatoSelecionado?.email || ''}
-          disabled={!editavel}
-          onChange={(evento) => setEmail(evento.target.value)}
-        />
-      </S.DivDados>
-      <S.DivDados>
-        <S.Icone src={IconeLocalizacao} />
-        <S.InputDados
-          type="text"
-          value={contatoSelecionado?.endereco || ''}
-          disabled={!editavel}
-          onChange={(evento) => setEndereco(evento.target.value)}
-        />
-      </S.DivDados>
-      <S.DivDados>
-        <S.Icone src={IconeAniversario} />
-        <S.InputDados
-          type="text"
-          value={contatoSelecionado?.aniversario || ''}
-          disabled={!editavel}
-          onChange={(evento) => setAniversario(evento.target.value)}
-        />
+        <S.DivDado>
+          <S.Icone src={IconeNumero} />
+          <S.InputDados
+            type="text"
+            value={numero}
+            disabled={!editavel}
+            onChange={(evento) => setNumero(evento.target.value)}
+          />
+        </S.DivDado>
+        <S.DivDado>
+          <S.Icone src={IconeEmail} />
+          <S.InputDados
+            type="text"
+            value={email}
+            disabled={!editavel}
+            onChange={(evento) => setEmail(evento.target.value)}
+          />
+        </S.DivDado>
+        <S.DivDado>
+          <S.Icone src={IconeLocalizacao} />
+          <S.InputDados
+            type="text"
+            value={endereco}
+            disabled={!editavel}
+            onChange={(evento) => setEndereco(evento.target.value)}
+          />
+        </S.DivDado>
+        <S.DivDado>
+          <S.Icone src={IconeAniversario} />
+          <S.InputDados
+            type="text"
+            value={aniversario}
+            disabled={!editavel}
+            onChange={(evento) => setAniversario(evento.target.value)}
+          />
+        </S.DivDado>
       </S.DivDados>
       <S.BotaoEditar onClick={alternarModoEdicao}>
         {editavel ? 'Salvar Contato' : 'Editar Contato'}

@@ -1,5 +1,7 @@
-import { Circulo } from './styles'
+import { BotaoPadrao } from '../../styles'
 
-const BotaoAdicionar = () => <Circulo to="/novo">Novo Contato +</Circulo>
+const BotaoAdicionar = () => (
+  <BotaoPadrao to="/novo">Novo Contato +</BotaoPadrao>
+)
 
 export default BotaoAdicionar
