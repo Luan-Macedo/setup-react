@@ -1,39 +1,61 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Contato from '../../components/Contato'
 import { RootReducer } from '../../store'
-import { Container } from './styles'
+import { Contador, Container, Titulo } from './styles'
+import { Tag } from '../../utils/enums/contato'
+import { selecionarContato } from '../../store/reducers/contatos'
 
 export type Props = {
   contador: number
 }
 
-const ListaDeContatos = (props: Props) => {
+const ListaDeContatos = () => {
+  const dispatch = useDispatch()
   const { itens } = useSelector((state: RootReducer) => state.contatos)
-  const { termo } = useSelector((state: RootReducer) => state.filtro)
+  const { termo, tag } = useSelector((state: RootReducer) => state.filtro)
 
-  const filtraContatos = () => {
-    return itens.filter(
-      (item) => item.nome.toLowerCase().search(termo.toLowerCase()) >= 0
-    )
+  const handleSelecionarContato = (id: number) => {
+    dispatch(selecionarContato(id))
   }
 
-  const contatosOrdenadosEFiltrados = filtraContatos().sort((a, b) => {
+  const filtraContatos = () => {
+    let contatosFiltrados = itens
+
+    if (termo) {
+      contatosFiltrados = contatosFiltrados.filter((item) =>
+        item.nome.toLowerCase().includes(termo.toLowerCase())
+      )
+    }
+
+    if (tag && tag !== Tag.TODOS) {
+      contatosFiltrados = contatosFiltrados.filter((item) => item.tag === tag)
+    }
+
+    return contatosFiltrados
+  }
+
+  const contatosOrdenadosEFiltrados = [...filtraContatos()].sort((a, b) => {
     return a.nome.localeCompare(b.nome)
   })
+
+  const totalDeContatos = itens.length
 
   return (
     <Container>
       <ul>
-        <span>{props.contador}</span>
-        <h2>Contatos</h2>
+        <Contador>{totalDeContatos} Total</Contador>
+        <Titulo>Contatos</Titulo>
         {contatosOrdenadosEFiltrados.map((c) => (
-          <li key={c.id}>
+          <li key={c.id} onClick={() => handleSelecionarContato(c.id)}>
             <Contato
               id={c.id}
               nome={c.nome}
               numero={c.numero}
               email={c.email}
               empresa={c.empresa}
+              tag={c.tag}
+              endereco={c.endereco}
+              aniversario={c.aniversario}
             />
           </li>
         ))}

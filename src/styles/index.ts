@@ -9,6 +9,10 @@ const EstiloGlobal = createGlobalStyle`
     text-decoration: none;
     list-style: none;
   }
+
+  body{
+    background-color: #171717;
+  }
 `
 
 export const Container = styled.div`

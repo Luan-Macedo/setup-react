@@ -8,11 +8,11 @@ import * as S from './styles'
 import { remover } from '../../store/reducers/contatos'
 import ContatoClass from '../../models/Contato'
 
-import IconeOpcoes from '../../images/icons8-menu-25.png'
+import IconeOpcoes from '../../images/icons8-menu-30.png'
 
 type Props = ContatoClass
 
-const Contato = ({ nome, id }: Props) => {
+const Contato = ({ nome, id, tag }: Props) => {
   const dispatch = useDispatch()
   const [opcoesVisiveis, setOpcoesVisiveis] = useState(false)
   const botaoRef = useRef<HTMLDivElement>(null)
@@ -44,7 +44,7 @@ const Contato = ({ nome, id }: Props) => {
         <Avatar nome={nome.toUpperCase()} />
         <div>
           <S.Nome>{nome}</S.Nome>
-          <S.Tag>Familia</S.Tag>
+          <S.Tag>{tag}</S.Tag>
         </div>
       </S.Info>
       {opcoesVisiveis ? (

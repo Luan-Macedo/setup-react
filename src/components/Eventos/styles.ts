@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: grid;
   padding: 20px;
+  color: #fff;
 
   span {
     display: block;
@@ -13,7 +14,6 @@ export const Evento = styled.div`
   display: flex;
   padding: 10px;
   background-color: #000;
-  color: #fff;
   border-radius: 8px;
   margin-top: 4px;
   margin-bottom: 4px;
@@ -50,6 +50,8 @@ export const BotaoAdicionarEvento = styled.button`
   border: none;
   background-color: #000;
   color: #fff;
+  font-weight: bold;
+  font-size: 14px;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;

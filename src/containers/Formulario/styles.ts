@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const DivForm = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
 `
 
 export const Formulario = styled.form`

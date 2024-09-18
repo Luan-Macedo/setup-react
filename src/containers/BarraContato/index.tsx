@@ -1,15 +1,25 @@
+import { useSelector } from 'react-redux'
 import CabecalhoContato from '../../components/CabecalhoContato'
 import Dados from '../../components/Dados'
 import Eventos from '../../components/Eventos'
+import { RootReducer } from '../../store'
 
-import { DivContato } from './styles'
+const BarraContato = () => {
+  const contatoSelecionado = useSelector(
+    (state: RootReducer) => state.contatos.contatoSelecionado
+  )
 
-const BarraContato = () => (
-  <DivContato>
-    <CabecalhoContato />
-    <Dados />
-    <Eventos />
-  </DivContato>
-)
+  if (!contatoSelecionado) {
+    return <div>Selecione um contato</div>
+  }
+
+  return (
+    <div>
+      <CabecalhoContato />
+      <Dados />
+      <Eventos />
+    </div>
+  )
+}
 
 export default BarraContato

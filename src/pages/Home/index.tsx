@@ -5,7 +5,7 @@ import ListaDeContatos from '../../containers/ListaDeContatos'
 const Home = () => (
   <>
     <BarraDePesquisa />
-    <ListaDeContatos contador={0} />
+    <ListaDeContatos />
     <BarraContato />
   </>
 )

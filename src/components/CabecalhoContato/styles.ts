@@ -5,9 +5,7 @@ export const ContainerContato = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+  background-color: #171717;
 `
 
 export const ContainerInfos = styled.div`
@@ -29,8 +27,8 @@ export const Tag = styled.span`
   padding: 0 6px;
   font-size: 12px;
   font-weight: bold;
-  background-color: #fff;
-  color: #000;
+  background-color: #2b2b2b;
+  color: #fff;
   border-radius: 8px;
   margin-right: 5px;
 `
@@ -39,8 +37,8 @@ export const BotaoAdicionarTag = styled.button`
   padding: 0 4px;
   font-size: 12px;
   font-weight: bold;
-  background-color: #fff;
-  color: #000;
+  background-color: #2b2b2b;
+  color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;

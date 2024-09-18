@@ -4,8 +4,9 @@ export const Card = styled.div`
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #84817a;
+  border-bottom: 1px solid #424242;
   cursor: pointer;
+  color: #fff;
 `
 
 export const Info = styled.div`
@@ -28,7 +29,6 @@ export const Dados = styled.div`
 `
 
 export const Campos = styled.input`
-  color: #84817a;
   font-size: 12px;
   border: none;
   background-color: transparent;

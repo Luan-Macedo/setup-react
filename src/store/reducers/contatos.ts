@@ -3,10 +3,12 @@ import Contato from '../../models/Contato'
 
 type ContatosState = {
   itens: Contato[]
+  contatoSelecionado?: Contato
 }
 
 const initialState: ContatosState = {
-  itens: []
+  itens: [],
+  contatoSelecionado: undefined
 }
 
 const contatosSlice = createSlice({
@@ -44,9 +46,15 @@ const contatosSlice = createSlice({
       if (indexDoContato >= 0) {
         state.itens[indexDoContato] = action.payload
       }
+    },
+    selecionarContato: (state, action: PayloadAction<number>) => {
+      state.contatoSelecionado = state.itens.find(
+        (contato) => contato.id === action.payload
+      )
     }
   }
 })
 
-export const { remover, cadastrar, salvar } = contatosSlice.actions
+export const { remover, cadastrar, salvar, selecionarContato } =
+  contatosSlice.actions
 export default contatosSlice.reducer

@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { Props } from '.'
 
-export const Option = styled.div<Props>`
+type PropsSemTag = Omit<Props, 'tag'>
+
+export const Option = styled.div<PropsSemTag>`
   display: flex;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid ${(props) => (props.ativo ? '#000' : '#fff')};
-  background-color: ${(props) => (props.ativo ? '#000' : '#fff')};
-  color: ${(props) => (props.ativo ? '#fff' : '#000')};
+  background-color: ${(props) => (props.ativo ? '#424242' : 'transparent')};
+  color: #fff;
   padding: 4px;
   cursor: pointer;
 `

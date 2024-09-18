@@ -25,3 +25,5 @@ export const InputDados = styled.input`
   background-color: transparent;
   border: none;
 `
+
+export const BotaoEditar = styled.button``
